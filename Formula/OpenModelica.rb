@@ -30,7 +30,7 @@ class Openmodelica < Formula
   def install
     ENV["LDFLAGS"] = "-L#{Formula["openblas"].opt_lib} -L#{Formula["gettext"].opt_lib}"
     ENV["CPPFLAGS"] = "-I#{Formula["openblas"].opt_include} -I#{Formula["gettext"].opt_include} -I#{Formula["qt-webkit"].opt_include}"
-    ENV["CFLAGS"] = "-I#{Formula["openblas"].opt_include} -I#{Formula["gettext"].opt_include} -I#{Formula["qt-webkit"].opt_include"
+    ENV["CFLAGS"]   = "-I#{Formula["openblas"].opt_include} -I#{Formula["gettext"].opt_include} -I#{Formula["qt-webkit"].opt_include}"
     ENV["QMAKEPATH"] = "#{Formula["qt-webkit"].opt_prefix}"
     args = %W[--disable-debug
               --with-lapack=-lopenblas
