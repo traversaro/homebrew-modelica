@@ -1,5 +1,3 @@
-# Based on https://raw.githubusercontent.com/grantstephens/homebrew-OpenModelica/master/OpenModelica.rb
-# Only supports head for now 
 class Openmodelica < Formula
   desc "Open-source modeling and simulation tool"
   homepage "https://openmodelica.org/"
@@ -10,6 +8,9 @@ class Openmodelica < Formula
     option "with-library", "Build with OMLibraries"
   end
 
+# Based on https://raw.githubusercontent.com/grantstephens/homebrew-OpenModelica/master/OpenModelica.rb
+# Only supports head for now 
+  
   depends_on "qt" =>:build
   depends_on "autoconf" =>:build
   depends_on "automake" =>:build
