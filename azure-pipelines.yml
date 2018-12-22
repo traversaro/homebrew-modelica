@@ -14,5 +14,5 @@ jobs:
     steps:
       - script: |
           # See https://github.com/Homebrew/brew/issues/1468
-          brew install --build-from-source $(Build.SourcesDirectory)/Formula/OpenModelica.rb
+          brew install --HEAD --build-from-source $(Build.SourcesDirectory)/Formula/OpenModelica.rb
         displayName: 'Build OpenModelica formula'
