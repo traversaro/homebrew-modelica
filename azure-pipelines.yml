@@ -3,17 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
 
-pool:
-  vmImage: 'macOS-10.13'
+jobs:
+  - job: osx
+    displayName: macOS High Sierra
+    timeoutInMinutes: 360
+    pool:
+      vmImage: 'macOS-10.13'
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    # See https://github.com/Homebrew/brew/issues/1468
-    brew install --build-from-source $(Build.SourcesDirectory)/Formula/OpenModelica.rb
-  displayName: 'Build OpenModelica formula'
+    steps:
+      - script: |
+        # See https://github.com/Homebrew/brew/issues/1468
+        brew install --build-from-source $(Build.SourcesDirectory)/Formula/OpenModelica.rb
+        displayName: 'Build OpenModelica formula'
