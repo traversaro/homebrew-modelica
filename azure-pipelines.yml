@@ -13,6 +13,8 @@ jobs:
 
     steps:
       - script: |
+          # See https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=vsts&tabs=yaml#xcode
+          /bin/bash -c "sudo xcode-select -s /Applications/Xcode_10.1.app/Contents/Developer"
           # See https://github.com/Homebrew/brew/issues/1468
           brew install --HEAD --build-from-source $(Build.SourcesDirectory)/Formula/OpenModelica.rb
         displayName: 'Build OpenModelica formula'
