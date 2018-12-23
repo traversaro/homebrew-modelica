@@ -17,4 +17,10 @@ jobs:
           /bin/bash -c "sudo xcode-select -s /Applications/Xcode_10.1.app/Contents/Developer"
           # See https://github.com/Homebrew/brew/issues/1468
           brew install --HEAD --build-from-source $(Build.SourcesDirectory)/Formula/OpenModelica.rb
+          # Debug
+          cat /Users/vsts/Library/Logs/Homebrew/OpenModelica/03.make
         displayName: 'Build OpenModelica formula'
+      - script: |
+          cat /Users/vsts/Library/Logs/Homebrew/OpenModelica/03.make
+        displayName: 'Print error log'
+
