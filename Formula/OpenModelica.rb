@@ -11,7 +11,7 @@ class Openmodelica < Formula
 # Based on https://raw.githubusercontent.com/grantstephens/homebrew-OpenModelica/master/OpenModelica.rb
 # Only supports head for now 
   
-  depends_on "qt" =>:build
+  depends_on "qt"
   depends_on "autoconf" =>:build
   depends_on "automake" =>:build
   depends_on "cmake" =>:build
@@ -24,6 +24,7 @@ class Openmodelica < Formula
   depends_on "readline" =>:build
   depends_on "xz" =>:build
   depends_on "KDE-mac/kde/qt-webkit"
+  depends_on "boost"
 
   depends_on "omniorb" => :optional
 
