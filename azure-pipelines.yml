@@ -18,7 +18,7 @@ jobs:
           # See https://github.com/Homebrew/brew/issues/1468
           brew install --HEAD --build-from-source $(Build.SourcesDirectory)/Formula/OpenModelica.rb
         displayName: 'Build OpenModelica formula'
-     - script: |
+      - script: |
           cat /Users/vsts/Library/Logs/Homebrew/OpenModelica/03.make
         displayName: 'Print error log'
 
