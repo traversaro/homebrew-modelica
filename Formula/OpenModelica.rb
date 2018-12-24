@@ -4,8 +4,9 @@ class Openmodelica < Formula
   url "https://github.com/OpenModelica/OpenModelica/releases/download/v1.9.5/openmodelica_1.9.5.tar.xz"
   sha256 "d9ed8ce13a764ed3ed36a52859f4d23e3f3fae0cf5af1fe4a9db4b9ba702d511"
   head do
-    url "https://github.com/OpenModelica/OpenModelica.git"
+    url "https://github.com/traversaro/OpenModelica.git"
     option "with-library", "Build with OMLibraries"
+    branch "fix-homebrew"
   end
 
 # Based on https://raw.githubusercontent.com/grantstephens/homebrew-OpenModelica/master/OpenModelica.rb
